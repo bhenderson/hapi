@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/hapi
+lib/hapi.rb
+test/test_hapi.rb
