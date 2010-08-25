@@ -1,8 +1,15 @@
-require "test/unit"
+require "test/test_helper"
 require "hapi"
 
-class TestHapi < Test::Unit::TestCase
-  def test_sanity
-    flunk "write tests or I will kneecap you"
+class TestHapi < MiniTest::Unit::TestCase
+
+  def test_set_uri
+    assert_nil Hapi.uri
+
+    uri      = 'http://url/to/hudson'
+    Hapi.uri = uri
+
+    assert_equal Hapi.uri, URI.parse(uri)
   end
+
 end
